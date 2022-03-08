@@ -10,9 +10,9 @@ import PlantVarietyInfo from '../screens/PlantVarietyInfo';
 const Tab = createBottomTabNavigator();
 
 export default () => (
-    <Tab.Navigator tabBar={props=><CustomPlantTabBar {...props}/> } >
-        <Tab.Screen  name="PlantInfo" component={PlantInfo} />  
-        <Tab.Screen options = {{title:"Variedades"}} name="PlantVarietyList" component={PlantVarietyList} /> 
-        <Tab.Screen options = {{title:"Cultivo"}} name="PlantVarietyInfo" component={PlantVarietyInfo} />   
+    <Tab.Navigator tabBar={props => <CustomPlantTabBar {...props} />} >
+        <Tab.Screen options={{ headerShown: false }} name="PlantInfo" component={PlantInfo} />
+        <Tab.Screen options={{ title: "Variedades", headerShown: false }} name="PlantVarietyList" component={PlantVarietyList} />
+        <Tab.Screen options={{ title: "Cultivo" }} name="PlantVarietyInfo" component={PlantVarietyInfo} />
     </Tab.Navigator>
 );

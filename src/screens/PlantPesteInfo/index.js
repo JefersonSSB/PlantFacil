@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Container, Logo, AppName, FakeSwiper, Scroller, TitleDescription, Description, Name, Days, SwipeItem, SwipeImage, BackButton, BottonSpace } from './styles';
+import { Container, Logo, AppName, FakeSwiper, Scroller, TitleDescription, Description, Name, Days, SwipeItem, SwipeImage, BName, BottonSpace } from './styles';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Swiper from 'react-native-swiper';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { PlantVariety } from '../../data/varianteInfo';
+import { PlantVariety } from '../../data/pesteInfo';
 import { UserContext } from '../../contexts/UserContext';
+import PesteTratament from '../PesteTratament';
 
 
 export default () => {
@@ -19,9 +20,8 @@ export default () => {
     const getPlant = () => {
 
         const plantVariety = PlantVariety;
-        const plantList = plantVariety[plant.plantId].variantes;
+        const plantList = plantVariety[0].variantes;
         setList(plantList[id.params.id]);
-
     }
 
     const handleBackButton = async () => {
@@ -31,6 +31,14 @@ export default () => {
     useEffect(() => {
         getPlant();
     }, [list, id]);
+
+    const handleClick = () => {
+
+        navigation.navigate('PestTratament', {
+            screen: 'PestTratament',
+            params: { id: list.id }
+        });
+    }
 
 
     return (
@@ -55,14 +63,17 @@ export default () => {
                 }
                 <AppName>{list.nome}</AppName>
                 <Name>{list.nomeCientifico}</Name>
-                <Days>Media do crescimento: {list.dias}</Days>
                 <TitleDescription>Descrição:</TitleDescription>
                 <Description>{list.description}</Description>
-                <TitleDescription>Consumo:</TitleDescription>
-                <Description>{list.diferencas}</Description>
+                <TitleDescription>Sintomas:</TitleDescription>
+                <Description>{list.sintoma}</Description>
+                <TitleDescription>Prevenção:</TitleDescription>
+                <Description>{list.prevencao}</Description>
 
             </Scroller>
-            <BottonSpace></BottonSpace>
+            <BottonSpace>
+                <BName onPress={handleClick}>Tratamento</BName>
+            </BottonSpace>
         </Container >
     );
 }

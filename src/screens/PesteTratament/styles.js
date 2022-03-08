@@ -1,8 +1,25 @@
 import React from 'react'
 import styled from 'styled-components/native';
 
-export const BottonSpace = styled.View`
-height: 50px;
+export const BottonSpace = styled.TouchableOpacity`
+height: 40px;
+width:180px;
+margin: 10px;
+border-radius: 10px;
+background-color: #6ea7f8;
+`;
+
+export const Barea = styled.View`
+flex-direction:row;
+height: 60px;
+flex: 1;
+`;
+export const BName = styled.Text`
+color: #FFF; 
+textAlign:center;
+font-size:24px;
+font-family: sans-serif;
+font-weight:bold;
 `;
 
 export const Container = styled.SafeAreaView`
@@ -12,13 +29,12 @@ background-color: #FFFFFF;
 
 
 export const Scroller = styled.ScrollView`
+margin-top: -500px;
 flex: 1;
 `;
 
 export const Logo = styled.Image`
-margin-top: -100px;
-width: 250px;
-height: 250px;
+
 `;
 
 export const SwipeItem = styled.View`
@@ -29,10 +45,7 @@ border-bottom-right-radius: 50px;
 `;
 
 export const SwipeImage = styled.Image`
-width: 100%;
-height: 240px;
-border-bottom-left-radius: 50px;
-border-bottom-right-radius: 50px;
+
 `;
 
 export const AppName = styled.Text`
@@ -60,13 +73,7 @@ font-family: sans-serif;
 `;
 
 export const Days = styled.Text`
-margin-left: 15px;
-margin-top: 20px;
-margin-bottom: 15px;
-color: #000; 
-font-size:18px;
-font-weight:bold;
-font-family: sans-serif;
+
 `;
 
 export const Description = styled.Text`
@@ -80,16 +87,6 @@ margin-bottom: 15px;
 
 
 export const FakeSwiper = styled.View`
-height: 240px;
-background-color: #2b8921;
-border-bottom-left-radius: 50px;
-border-bottom-right-radius: 50px;
+
 `;
 
-export const BackButton = styled.TouchableOpacity`
-position: absolute;
-margin: 10px;
-left: 0;
-top:0;
-z-index: 9;
-`;

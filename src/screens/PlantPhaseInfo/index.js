@@ -3,7 +3,7 @@ import { Container, Logo, AppName, FakeSwiper, Scroller, TitleDescription, Descr
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Swiper from 'react-native-swiper';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { PlantVariety } from '../../data/varianteInfo';
+import { PlantVariety } from '../../data/phaseInfo';
 import { UserContext } from '../../contexts/UserContext';
 
 
@@ -54,12 +54,8 @@ export default () => {
                     <FakeSwiper></FakeSwiper>
                 }
                 <AppName>{list.nome}</AppName>
-                <Name>{list.nomeCientifico}</Name>
-                <Days>Media do crescimento: {list.dias}</Days>
                 <TitleDescription>Descrição:</TitleDescription>
                 <Description>{list.description}</Description>
-                <TitleDescription>Consumo:</TitleDescription>
-                <Description>{list.diferencas}</Description>
 
             </Scroller>
             <BottonSpace></BottonSpace>

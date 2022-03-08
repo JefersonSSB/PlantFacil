@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components/native';
 
-export const BottonSpace = styled.View`
+export const BottonSpace = styled.TouchableOpacity`
 height: 50px;
+margin: 15px;
+border-radius: 10px;
+background-color: #6ea7f8;
 `;
 
 export const Container = styled.SafeAreaView`
@@ -38,6 +41,14 @@ border-bottom-right-radius: 50px;
 export const AppName = styled.Text`
 margin-left: 15px;
 color: #4b506a; 
+font-size:36px;
+font-family: sans-serif;
+font-weight:bold;
+`;
+
+export const BName = styled.Text`
+color: #FFF; 
+textAlign:center;
 font-size:36px;
 font-family: sans-serif;
 font-weight:bold;

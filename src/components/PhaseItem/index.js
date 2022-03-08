@@ -12,13 +12,6 @@ export default ({ data, tab }) => {
 
     const handleClick = () => {
 
-        userDispatch({
-            type: 'setPlant',
-            payload: {
-                plantId: data.id
-            }
-        });
-
         navigation.navigate(tab, {
             screen: 'PlantInfo',
             params: { id: data.id }
@@ -26,7 +19,7 @@ export default ({ data, tab }) => {
     }
 
     return (
-        <Area onPress={handleClick} style={{ backgroundColor: '#dcf8d6' }}>
+        <Area onPress={handleClick}>
             <Avatar source={{ uri: data.imagen }} />
             <InfoArea>
                 <Name>{data.nome}</Name>

@@ -12,7 +12,7 @@ export const TabText = styled.Text`
 color: #FFF;
 `;
 
-export const  TabItem = styled.TouchableOpacity`
+export const TabItem = styled.TouchableOpacity`
 flex:1;
 justify-content: center;
 align-items: center;

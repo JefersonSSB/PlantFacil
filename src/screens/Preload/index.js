@@ -1,25 +1,25 @@
-import React, {useEffect} from 'react';
-import {Container, Logo, AppName} from './styles'; 
-import {useNavigation} from '@react-navigation/native';
+import React, { useEffect } from 'react';
+import { Container, Logo, AppName } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 
-
-export default () =>{
+export default () => {
 
     const navigate = useNavigation();
-        
+
     useEffect(() => {
 
         navigate.reset({
-            routes:[{name:'MainTab'}]
+            routes: [{ name: 'MainTab' }]
         });
-    
+
     }, []);
+
 
     return (
         <Container>
-           <Logo source={require('../../assets/imagens/logo.jpg')} />
-           <AppName>PlantFacil </AppName>
+            <Logo source={require('../../assets/imagens/logo.jpg')} />
+            <AppName>PlantFacil </AppName>
         </Container>
     );
 }

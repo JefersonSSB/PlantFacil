@@ -12,13 +12,6 @@ export default ({ data, tab }) => {
 
     const handleClick = () => {
 
-        userDispatch({
-            type: 'setPlant',
-            payload: {
-                plantId: data.id
-            }
-        });
-
         navigation.navigate(tab, {
             screen: 'PlantInfo',
             params: { id: data.id }

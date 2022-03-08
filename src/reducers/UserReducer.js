@@ -4,13 +4,12 @@ export const initialState = {
 };
 
 
-export const UserReducer = (state,action) =>{
-    console.log(action.payload);
-switch(action.type){
-    case 'setPlant':
-        return {...state, plantId:action.payload.plantId};
-    break;
-    default:
-        return state;
-}
+export const UserReducer = (state, action) => {
+    switch (action.type) {
+        case 'setPlant':
+            return { ...state, plantId: action.payload.plantId };
+            break;
+        default:
+            return state;
+    }
 }
