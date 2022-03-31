@@ -53,8 +53,8 @@ export default () => {
     return (
         <Container>
             <Barea>
-                <BottonSpace onPress={handleClickO}><BName>Organico</BName></BottonSpace>
-                <BottonSpace onPress={handleClickQ}><BName>Quimico</BName></BottonSpace>
+                <BottonSpace onPress={handleClickO}><BName>Orgânico</BName></BottonSpace>
+                <BottonSpace onPress={handleClickQ}><BName>Químico</BName></BottonSpace>
             </Barea>
             <Scroller>
                 <AppName>{list.nome}</AppName>
